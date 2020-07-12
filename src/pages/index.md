@@ -11,7 +11,7 @@ sections:
     actions:
       - label: Get Started
         url: docs/index.html
-        type: primary
+        style: primary
   - section_id: features
     type: section_grid
     col_number: three
@@ -24,7 +24,7 @@ sections:
         actions:
           - label: Get Started
             url: docs/index.html
-            type: link
+            style: link
       - title: Blog
         content: >-
           Vestibulum a nunc ut eros condimentum posuere. Nullam dapibus quis
@@ -32,7 +32,7 @@ sections:
         actions:
           - label: View Posts
             url: blog/index.html
-            type: link
+            style: link
       - title: Style Guides
         content: >-
           Donec lobortis velit sed suscipit lobortis. Ut non quam metus. Nullam
@@ -41,7 +41,7 @@ sections:
         actions:
           - label: Learn More
             url: /style-guide.html
-            type: link
+            style: link
   - section_id: text-img
     type: section_content
     image: images/10.jpg
@@ -54,10 +54,10 @@ sections:
     actions:
       - label: View Demo
         url: /docs/getting-started/index.html
-        type: primary
+        style: primary
       - label: Get Started
         url: /docs/getting-started/index.html
-        type: secondary
+        style: secondary
   - section_id: features-two-col
     type: section_grid
     title: Sample Layouts
@@ -72,7 +72,7 @@ sections:
         actions:
           - label: Learn More
             url: /overview.html
-            type: link
+            style: link
       - title: Showcase
         content: >-
           Donec lobortis velit sed suscipit lobortis. Ut non quam metus. Nullam
@@ -81,7 +81,7 @@ sections:
         actions:
           - label: Learn More
             url: /showcase.html
-            type: link
+            style: link
   - section_id: cta
     type: section_cta
     title: The Title of The Call to Action Block
@@ -89,7 +89,7 @@ sections:
     actions:
       - label: Get Started
         url: /docs/getting-started/installation.html
-        type: primary
+        style: primary
   - section_id: text-no-img
     type: section_content
     title: A Section Without Image
@@ -100,6 +100,6 @@ sections:
     actions:
       - label: Get Started
         url: /docs/getting-started/installation.html
-        type: primary
+        style: primary
 template: advanced
 ---
