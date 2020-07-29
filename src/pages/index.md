@@ -10,7 +10,7 @@ sections:
       one to three sentences, but can be changed as you prefer.
     actions:
       - label: Get Started
-        url: docs/index.html
+        url: /docs
         style: primary
   - section_id: features
     type: section_grid
@@ -23,7 +23,7 @@ sections:
           tincidunt ut tellus. Vivamus rhoncus mattis varius.
         actions:
           - label: Get Started
-            url: docs/index.html
+            url: /docs
             style: link
       - title: Blog
         content: >-
@@ -31,7 +31,7 @@ sections:
           nunc non interdum. Pellentesque tortor ligula, gravida ac commodo eu.
         actions:
           - label: View Posts
-            url: blog/index.html
+            url: /blog
             style: link
       - title: Style Guides
         content: >-
@@ -40,7 +40,7 @@ sections:
           tincidunt ut tellus. Vivamus rhoncus mattis varius.
         actions:
           - label: Learn More
-            url: /style-guide.html
+            url: /style-guide
             style: link
   - section_id: text-img
     type: section_content
@@ -53,10 +53,10 @@ sections:
       consectetur lobortis.
     actions:
       - label: View Demo
-        url: /docs/getting-started/index.html
+        url: /docs/getting-started
         style: primary
       - label: Get Started
-        url: /docs/getting-started/index.html
+        url: /docs/getting-started
         style: secondary
   - section_id: features-two-col
     type: section_grid
@@ -71,7 +71,7 @@ sections:
           fringilla, fringilla tortor at, pulvinar orci.
         actions:
           - label: Learn More
-            url: /overview.html
+            url: /overview
             style: link
       - title: Showcase
         content: >-
@@ -80,7 +80,7 @@ sections:
           tincidunt ut tellus. Vivamus rhoncus mattis varius.
         actions:
           - label: Learn More
-            url: /showcase.html
+            url: /showcase
             style: link
   - section_id: cta
     type: section_cta
@@ -88,7 +88,7 @@ sections:
     subtitle: This is an optional description for the call to action block.
     actions:
       - label: Get Started
-        url: /docs/getting-started/installation.html
+        url: /docs/getting-started/installation
         style: primary
   - section_id: text-no-img
     type: section_content
@@ -99,7 +99,7 @@ sections:
       consectetur lobortis.
     actions:
       - label: Get Started
-        url: /docs/getting-started/installation.html
+        url: /docs/getting-started/installation
         style: primary
 template: advanced
 ---

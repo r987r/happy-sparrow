@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {classNames, safePrefix, markdownify} from '../utils';
+import {classNames, withPrefix, markdownify} from '../utils';
 import CtaButtons from './CtaButtons';
 
 export default class SectionContent extends React.Component {
@@ -13,7 +13,7 @@ export default class SectionContent extends React.Component {
                 <div className={classNames('grid', 'grid-middle', 'grid-center', {'grid-swap': _.get(section, 'image', null) && (_.get(section, 'image_position', null) === 'right')})}>
                   {_.get(section, 'image', null) && (
                   <div className="grid-item block-image">
-                    <img src={safePrefix(_.get(section, 'image', null))} alt={_.get(section, 'title', null)} />
+                    <img src={withPrefix(_.get(section, 'image', null))} alt={_.get(section, 'title', null)} />
                   </div>
                   )}
                   <div className="grid-item block-body">

@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {graphql} from 'gatsby';
 
 import {Layout} from '../components/index';
-import {toStyleObj, safePrefix, htmlToReact} from '../utils';
+import {toStyleObj, withPrefix, htmlToReact} from '../utils';
 
 // this minimal GraphQL query ensures that when 'gatsby develop' is running,
 // any changes to content files are reflected in browser
@@ -22,7 +22,7 @@ export default class Page extends React.Component {
               <article className="post post-full">
                 <header className="post-header has-gradient outer">
                   {_.get(this.props, 'pageContext.frontmatter.image', null) && (
-                  <div className="bg-img" style={toStyleObj('background-image: url(\'' + safePrefix(_.get(this.props, 'pageContext.frontmatter.image', null)) + '\')')}/>
+                  <div className="bg-img" style={toStyleObj('background-image: url(\'' + withPrefix(_.get(this.props, 'pageContext.frontmatter.image', null)) + '\')')}/>
                   )}
                   <div className="inner-sm">
                     <h1 className="post-title">{_.get(this.props, 'pageContext.frontmatter.title', null)}</h1>

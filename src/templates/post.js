@@ -4,7 +4,7 @@ import moment from 'moment-strftime';
 import {graphql} from 'gatsby';
 
 import {Layout} from '../components/index';
-import {toStyleObj, safePrefix, htmlToReact} from '../utils';
+import {toStyleObj, withPrefix, htmlToReact} from '../utils';
 
 // this minimal GraphQL query ensures that when 'gatsby develop' is running,
 // any changes to content files are reflected in browser
@@ -23,7 +23,7 @@ export default class Post extends React.Component {
               <article className="post post-full">
                 <header className="post-header has-gradient outer">
                   {_.get(this.props, 'pageContext.frontmatter.image', null) && (
-                  <div className="bg-img" style={toStyleObj('background-image: url(\'' + safePrefix(_.get(this.props, 'pageContext.frontmatter.image', null)) + '\')')}/>
+                  <div className="bg-img" style={toStyleObj('background-image: url(\'' + withPrefix(_.get(this.props, 'pageContext.frontmatter.image', null)) + '\')')}/>
                   )}
                   <div className="inner-sm">
                     <div className="post-meta">

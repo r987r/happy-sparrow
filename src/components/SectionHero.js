@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {toStyleObj, safePrefix, markdownify} from '../utils';
+import {toStyleObj, withPrefix, markdownify} from '../utils';
 import CtaButtons from './CtaButtons';
 
 export default class SectionHero extends React.Component {
@@ -10,7 +10,7 @@ export default class SectionHero extends React.Component {
         return (
             <section id={_.get(section, 'section_id', null)} className="block block-hero has-gradient outer">
               {_.get(section, 'image', null) && (
-              <div className="bg-img" style={toStyleObj('background-image: url(\'' + safePrefix(_.get(section, 'image', null)) + '\')')}/>
+              <div className="bg-img" style={toStyleObj('background-image: url(\'' + withPrefix(_.get(section, 'image', null)) + '\')')}/>
               )}
               <div className="inner-sm">
                 {_.get(section, 'title', null) && (

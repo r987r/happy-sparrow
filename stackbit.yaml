@@ -8,28 +8,6 @@ uploadDir: images
 dataDir: src/data
 pagesDir: src/pages
 pageLayoutKey: template
-metadata:
-  title: Libris
-  description: A documentation theme
-  author: Stackbit
-  authorURL: 'https://www.stackbit.com'
-  palettes:
-    blue:
-      images:
-        small: images/demo-256x192.png
-        large: images/demo-1024x768.png
-    green:
-      images:
-        small: images/demo-256x192.png
-        large: images/demo-1024x768.png
-    navy:
-      images:
-        small: images/demo-256x192.png
-        large: images/demo-1024x768.png
-    violet:
-      images:
-        small: images/demo-256x192.png
-        large: images/demo-1024x768.png
 pageData:
   - pagePath: /
     initialExpandedPaths:
@@ -40,11 +18,6 @@ pageData:
       - '[0].fields.sections.items[0].fields.content'
       - '[1]'
       - '[1].fields.palette'
-stackbit_banner:
-  show_banner: true
-  name: Libris
-  create_url: 'https://app.stackbit.com/create?theme=libris'
-  github_url: 'https://github.com/stackbithq/stackbit-theme-libris'
 models:
   config:
     type: config
@@ -172,13 +145,14 @@ models:
     label: Documentation Sections
     fields:
       - type: string
-        name: root_folder
-        label: Root Folder
+        name: root_docs_path
+        label: Root Documentation URL Path
         description: >-
-          The path under which the documentation pages will be generated. For
-          example, set to "/" to put all documentation pages at root, or set to
-          "/docs/" to put all documentation pages under "/docs/".
-        default: /docs/
+          The URL path under which the documentation pages will be generated.
+          For example, value "/" will place all documentation pages at the site
+          root, while value "/docs" will place all documentation pages under the
+          "/docs" path.
+        default: /docs
         required: true
       - type: list
         name: sections

@@ -4,7 +4,7 @@ import moment from 'moment-strftime';
 import {graphql} from 'gatsby';
 
 import {Layout} from '../components/index';
-import {toStyleObj, safePrefix, getPages, Link} from '../utils';
+import {toStyleObj, withPrefix, getPages, Link} from '../utils';
 
 // this minimal GraphQL query ensures that when 'gatsby develop' is running,
 // any changes to content files are reflected in browser
@@ -23,7 +23,7 @@ export default class Blog extends React.Component {
             <Layout {...this.props}>
               <header className="page-header has-gradient outer">
                 {_.get(this.props, 'pageContext.frontmatter.image', null) && (
-                <div className="bg-img" style={toStyleObj('background-image: url(\'' + safePrefix(_.get(this.props, 'pageContext.frontmatter.image', null)) + '\')')}/>
+                <div className="bg-img" style={toStyleObj('background-image: url(\'' + withPrefix(_.get(this.props, 'pageContext.frontmatter.image', null)) + '\')')}/>
                 )}
                 <div className="inner-sm">
                   <h1 className="page-title">{_.get(this.props, 'pageContext.frontmatter.title', null)}</h1>
@@ -37,17 +37,17 @@ export default class Blog extends React.Component {
                   {_.map(display_posts, (post, post_idx) => (
                   <article key={post_idx} className="post">
                     {_.get(post, 'frontmatter.thumb_image', null) && (
-                    <Link className="post-thumbnail" to={safePrefix(_.get(post, 'url', null))}><img src={safePrefix(_.get(post, 'frontmatter.thumb_image', null))} alt={_.get(post, 'frontmatter.title', null)} /></Link>
+                    <Link className="post-thumbnail" to={withPrefix(_.get(post, 'url', null))}><img src={withPrefix(_.get(post, 'frontmatter.thumb_image', null))} alt={_.get(post, 'frontmatter.title', null)} /></Link>
                     )}
                     <header className="post-header">
                       <div className="post-meta">
                         <time className="published" dateTime={moment(_.get(post, 'frontmatter.date', null)).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(post, 'frontmatter.date', null)).strftime('%B %d, %Y')}</time>
                       </div>
-                      <h2 className="post-title line-left"><Link to={safePrefix(_.get(post, 'url', null))} rel="bookmark">{_.get(post, 'frontmatter.title', null)}</Link></h2>
+                      <h2 className="post-title line-left"><Link to={withPrefix(_.get(post, 'url', null))} rel="bookmark">{_.get(post, 'frontmatter.title', null)}</Link></h2>
                     </header>
                     {_.get(post, 'frontmatter.excerpt', null) && (<React.Fragment>
                     <p className="post-excerpt">{_.get(post, 'frontmatter.excerpt', null)}</p>
-                    <p className="read-more"><Link to={safePrefix(_.get(post, 'url', null))} className="read-more-link">Read More</Link></p>
+                    <p className="read-more"><Link to={withPrefix(_.get(post, 'url', null))} className="read-more-link">Read More</Link></p>
                     </React.Fragment>)}
                   </article>
                 ))}
