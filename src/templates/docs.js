@@ -52,6 +52,7 @@ export default class Docs extends React.Component {
                 <nav id="page-nav" className="page-nav">
                   <div id="page-nav-inside" className="page-nav-inside sticky">
                     <h2 className="page-nav-title">Jump to Section</h2>
+                    <div id="page-nav-link-container" />
                   </div>
                 </nav>
               </div>
