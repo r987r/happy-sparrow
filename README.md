@@ -20,7 +20,7 @@ Stackbit Libris Theme original README is located [here](./README.theme.md).
 
 1. Run the following command to fetch additional site contents from Stackbit if needed:
 
-        npx @stackbit/stackbit-pull --stackbit-pull-api-url=__STACKBIT_PULL_API_URL__
+        npx @stackbit/stackbit-pull --stackbit-pull-api-url=https://api.stackbit.com/pull/5f3ad0327fd919001cc7c2e4
 
 1. Start a local development server:
 
